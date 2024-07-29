@@ -11,5 +11,11 @@ pipeline {
 			cleanWs()
 			}
 		}
+		stage ('Build') {
+		    steps {
+			echo "Maven is clening and gnerating artifactory"
+			sh 'mvn clean package'
+			}
+		}
 	}
 }
