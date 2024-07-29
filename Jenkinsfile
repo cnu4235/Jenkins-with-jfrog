@@ -14,7 +14,7 @@ pipeline {
 		stage ('Build') {
 		    steps {
 			echo "Maven is clening and gnerating artifactory"
-			sh 'mvn clean package'
+			sh 'mvn clean install'
 			}
 		}
 	}
