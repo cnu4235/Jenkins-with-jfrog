@@ -11,6 +11,11 @@ pipeline {
 			cleanWs()
 			}
 		}
+		        stage('Checkout') {
+            steps {
+		   // checkout scm
+		git branch: 'main', url: 'https://github.com/cnu4235/Jenkins-with-jfrog.git'
+            }
 		stage ('Build') {
 		    steps {
 			echo "Maven is clening and gnerating artifactory"
