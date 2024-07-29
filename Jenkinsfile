@@ -3,9 +3,9 @@ Pipeline{
 
 
   stages{
-	Stage(Clean Workspace){
+	Stage(CleanWorkspace){
 		steps{
-		 cleanws()
+		 cleanWs()
 		}
 	}
         Stage(Build){
