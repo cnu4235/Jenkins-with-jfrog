@@ -1,18 +1,15 @@
-Pipeline{
-  agent any
+pipeline {
+    agent any
+    tools { 
+        maven 'Maven 3.9.6' 
+        // jdk '9.0.4'
+    }
 
-
-  stages{
-	Stage(CleanWorkspace){
-		steps{
-		 cleanWs()
+    stages {
+		stage('Clean') {
+		    steps {
+			cleanWs()
+			}
 		}
 	}
-        Stage(Build){
-                steps{
-                 sh "mvn clean package"
-                }
-        }
-
- }
 }
